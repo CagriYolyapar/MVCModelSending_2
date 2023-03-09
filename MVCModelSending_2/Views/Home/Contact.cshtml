@@ -1,0 +1,51 @@
+﻿@model List<Product>
+
+
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Isim</th>
+            <th>Fiyat</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Product item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+<hr />
+
+
+<ul>
+
+    @foreach (Product item in Model)
+	{
+        <li>@item.ProductName</li>
+	}
+
+
+
+
+
+
+</ul>
+
